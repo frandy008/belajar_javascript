@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>Belajar Javascript jQuery</title>
+  </head>
+  <body>
+
+    <div class="jumbotron pt-4 pb-4 mb-0">
+      <div class="container">
+        <h1 class="display-6 text-center">Belajar Javascript</h1>
+        <p class="lead text-center">Ini adalah pembelajaran untuk javascript pemula.</p>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="#">Nama Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" id="home" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" id="input-data" href="#">Input Data</a>
+            <a class="nav-item nav-link" id="pencarian" href="#">Pencarian Data</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      
+      <div class="row mt-3 justify-content-center">
+        <div class="col-md-8 col-xs-12 isi-content">
+
+        </div>
+
+      </div><!-- End Row -->
+
+    </div><!-- End Container -->
+
+    <footer>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <p class="text-center" id="footer">Copyright &copy; 2020 IMFDP</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.nav-link').click(function(){
+          var menu = $(this).attr('id');
+          if(menu == "home"){
+            $('.isi-content').load('home.php');           
+          }else if(menu == "input-data"){
+            $('.isi-content').load('input-data.php');            
+          }else if(menu == "pencarian"){
+            $('.isi-content').load('tutorial.php');           
+          }else if (menu == "edit-data") {
+            $('.isi-content').load('edit.php');
+          }
+        });
+     
+     
+        // halaman yang di load default pertama kali
+        $('.isi-content').load('home.php');           
+     
+      });
+    </script>
+  </body>
+</html>
